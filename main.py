@@ -23,9 +23,9 @@ window.config(background="black")
 
 window.geometry("360x360")
 
-sangria = "#5E1916"
-cherry = "#990F02"
-blush = "#BC544B"
+light_Blue = "#4E7CAD"
+navy = "#004080"
+blue_Blush = "#6C8CA9"
 black = "#040401"
 
 mid = 0.5
@@ -118,8 +118,6 @@ def Reset():
     result = string = None
 
 
-
-
 def Delete():
     text = entry.get()
     entry.delete(0, len(text))
@@ -128,95 +126,102 @@ def Delete():
 window.bind('<Escape>', toggle_Screen)
 
 title = tk.Label(window,
-                 background=sangria,
-                 foreground=black,
-                 activebackground=cherry,
-                 activeforeground=blush,
-                 highlightthickness=2,
-                 highlightcolor='WHITE',
-                 width=button_width,
-                 height=button_height,
-                 text="Spam Detector",
-                 font=("Arial", 35, "bold"))
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    width=button_width,
+    height=button_height,
+    text="Spam Detector",
+    font=("Arial", 35, "bold"))
+
 title.pack(fill=tk.X, side=tk.TOP)
 
 buttonSubmit = tk.Button(window,
-                         background=sangria,
-                         foreground=black,
-                         activebackground=cherry,
-                         activeforeground=blush,
-                         highlightthickness=2,
-                         highlightcolor='WHITE',
-                         command=Submit,
-                         width=button_width,
-                         height=button_height,
-                         text="Submit Text",
-                         font=("Arial", 16, "bold"))
-buttonSubmit.place(x=150, rely=mid)
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    command=Submit,
+    width=button_width,
+    height=button_height,
+    text="Submit Text",
+    font=("Arial", 16, "bold"))
+
+buttonSubmit.place(x=100, rely=mid)
 
 buttonExit = tk.Button(window,
-                       background=sangria,
-                       foreground=black,
-                       activebackground=cherry,
-                       activeforeground=blush,
-                       highlightthickness=2,
-                       highlightcolor='WHITE',
-                       command=Close,
-                       width=button_width,
-                       height=button_height,
-                       text="Exit",
-                       font=("Arial", 16, "bold"))
-buttonExit.place(x=480, rely=mid)
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    command=Close,
+    width=button_width,
+    height=button_height,
+    text="Exit",
+    font=("Arial", 16, "bold"))
+
+buttonExit.place(x=400, rely=mid)
 
 buttonDelete = tk.Button(window,
-                         background=sangria,
-                         foreground=black,
-                         activebackground=cherry,
-                         activeforeground=blush,
-                         highlightthickness=2,
-                         highlightcolor='WHITE',
-                         command=Delete,
-                         width=button_width,
-                         height=button_height,
-                         text="Delete",
-                         font=("Arial", 16, "bold"))
-buttonDelete.place(x=780, rely=mid)
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    command=Delete,
+    width=button_width,
+    height=button_height,
+    text="Delete",
+    font=("Arial", 16, "bold"))
+
+buttonDelete.place(x=700, rely=mid)
 
 buttonReset = tk.Button(window,
-                        background=sangria,
-                        foreground=black,
-                        activebackground=cherry,
-                        activeforeground=blush,
-                        highlightthickness=2,
-                        highlightcolor='WHITE',
-                        command=Reset,
-                        width=button_width,
-                        height=button_height,
-                        text="Reset",
-                        font=("Arial", 16, "bold"))
-buttonReset.place(x=1150, rely=mid)
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    command=Reset,
+    width=button_width,
+    height=button_height,
+    text="Reset",
+    font=("Arial", 16, "bold"))
+
+buttonReset.place(x=1000, rely=mid)
 
 entry = tk.Entry(window,
-                 width=30,
-                 background=sangria,
-                 foreground=black,
-                 highlightthickness=2,
-                 highlightcolor='WHITE',
-                 font=("Arial", 14, "bold"))
+    width=30,
+    background=light_Blue,
+    foreground=black,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    font=("Arial", 14, "bold"))
+
 entry.insert(0, "Insert Text Here")
 entry.pack(fill=tk.X, side=tk.TOP)
 
 status = tk.Label(window,
-                  background=sangria,
-                  foreground=black,
-                  activebackground=cherry,
-                  activeforeground=blush,
-                  highlightthickness=2,
-                  highlightcolor='WHITE',
-                  width=10,
-                  height=2,
-                  text="Result: ",
-                  font=("Arial", 35, "bold"))
+    background=light_Blue,
+    foreground=black,
+    activebackground=navy,
+    activeforeground=blue_Blush,
+    highlightthickness=2,
+    highlightcolor='WHITE',
+    width=10,
+    height=2,
+    text="Result: ",
+    font=("Arial", 35, "bold"))
+
 status.pack(fill=tk.X, side=tk.BOTTOM)
 
 window.mainloop()
